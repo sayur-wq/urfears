@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEULGI - BABY NOT BABY QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-area">
+            <div class="song-cover">
+                <img src="seulgi.jpg" alt="Seulgi - Baby Not Baby" id="coverImage">
+                <button id="toggleVideo" class="video-button">▶️</button>
+                <div class="player-container" style="display: none;">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/S-VLzICd2FE?autoplay=0&controls=1&rel=0" 
+                        title="SEULGI - BABY NOT BABY" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="lyrics-container">
+                <h2>Complete the Lyrics</h2>
+                <div class="options">
+                    <button class="lyric-option" data-correct="true">I'm your baby, not baby (nah, nah, ha-ha)</button>
+                    <button class="lyric-option" data-correct="false">I'm innocent and so perfect</button>
+                    <button class="lyric-option" data-correct="false">It's so fun to show me now</button>
+                    <button class="lyric-option" data-correct="false">Maybe, accidentally on purpose</button>
+                </div>
+                <div class="options" style="margin-top: 20px;">
+                    <button class="lyric-option" data-correct="true">I'm dangerous (dangerous) 난해한 척</button>
+                    <button class="lyric-option" data-correct="false">I'm your baby, not baby (yeah, yeah)</button>
+                    <button class="lyric-option" data-correct="false">그냥 내 사랑을 믿어</button>
+                    <button class="lyric-option" data-correct="false">마냥 아이 같은 얼굴</button>
+                </div>
+                <div class="options" style="margin-top: 20px;">
+                    <button class="lyric-option" data-correct="true">It goes A to B to three and four</button>
+                    <button class="lyric-option" data-correct="false">I'm your baby, not baby (oh, oh)</button>
+                    <button class="lyric-option" data-correct="false">그 너머의 단단함을 봐</button>
+                    <button class="lyric-option" data-correct="false">두 손으로 천천히 그리겠어</button>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <button class="lyric-option" onclick="checkAnswer('japanese')">Japanese</button>
+            <button class="lyric-option" onclick="checkAnswer('korean')">Korean</button>
+            <button class="lyric-option" onclick="checkAnswer('english')">English</button>
+        </div>
+        <div id="result"></div>
+        <div id="score">Score: 0</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
